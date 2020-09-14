@@ -190,6 +190,7 @@
  }
 
  div.room__selected .container--fluid .room__inner .room__inner-aside.active .room__aside-line2 {
+  margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -558,7 +559,8 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 100%
+  height: 100%;
+  padding-bottom: 50px
  }
 
  div.room__selected .container--fluid .room__inner .room__inner-aside.active .room__inner-btn {
@@ -1004,6 +1006,10 @@ i:focus {
  .wrapper .container {
   padding: 0 20px
  }
+
+ div.room__selected .container--fluid .room__inner .room__inner-aside.active .room__aside-line1 {
+  margin-right: 0px
+ }
 }
 
 .container {
@@ -1012,6 +1018,8 @@ i:focus {
  width: 100%;
  padding: 0 140px
 }
+
+
 
 .entry__inner,
 .inner__money-number,
