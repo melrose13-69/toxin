@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search room</title>
+  <link href="/assets//css/vendors.css" rel="stylesheet"><link href="/assets//css/module.css" rel="stylesheet"></head>
+  <body>
+    <div id="app">
+      <div class="wrapper">
+        <div class="content">
+                <header class="header__main-page header">
+                  <div class="container">
+                    <div class="header__inner">
+                      <div class="header__inner-logo"><a href="index.html"><img src="assets/img/TOXIN.svg" alt=""><img src="assets/img/toxin1.svg" alt=""></a></div>
+                      <div class="header__inner-menu">
+                        <div class="header__inner-list">
+                          <ul class="header__list">
+                            <li><a class="header__list-item" href="#">О нас</a></li>
+                            <li class="header__list-services"><a class="header__list-item" href="#">Услуги<span> </span></a></li>
+                            <li><a class="header__list-item" href="#">Вакансии</a></li>
+                            <li><a class="header__list-item" href="#">Новости</a></li>
+                            <li class="header__list-agreement"><a class="header__list-item" href="#">Соглашения<span> </span></a></li>
+                          </ul>
+                        </div>
+                        <div class="header__inner-btn"><a class="btn btn-transperent" href="signin.html">войти<span></span></a><a class="btn btn-gradient" href="reg.html">зарегистрироваться<span></span></a>
+                        </div>
+                        <div class="header__inner-burger"> 
+                          <div class="header__burger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+          <div class="room__selected">
+            <div class="container container--fluid">
+              <div class="room__inner">
+                <div class="room__inner-filter">
+                  <spam class="sorting">Сортировать
+                    <ul class="sorting__list">
+                      <li><span>Сначала популярные</span></li>
+                      <li><span>Сначала дешевые</span></li>
+                      <li><span>Сначала дорогие</span></li>
+                    </ul>
+                  </spam><span class="filter">Фильтр</span>
+                </div>
+                <div class="room__inner-aside">
+                  <div class="room__aside-line1">
+                          <div class="select__day-date">
+                            <label>даты пребывания в отеле</label>
+                            <input class="select__one-day" type="text" placeholder="ДД.ММ.ГГГГ">
+                          </div>
+                          <form class="guest__inner-amount" onsubmit="return false;">
+                            <h5>Гости</h5>
+                            <input class="guest__amount" type="text" value="0">
+                            <div class="option__inner invisible">
+                              <div class="option">
+                                <h4>Взрослые</h4>
+                                <div class="option__amount"><span class="minus minus-first">-</span>
+                                  <input class="guest__amount-first" type="text" readonly value="0"><span class="plus plus-first">+</span>
+                                </div>
+                              </div>
+                              <div class="option">
+                                <h4>Дети</h4>
+                                <div class="option__amount"><span class="minus minus-second">-</span>
+                                  <input class="guest__amount-second" type="text" readonly value="0"><span class="plus plus-second">+</span>
+                                </div>
+                              </div>
+                              <div class="option">
+                                <h4>Младенцы</h4>
+                                <div class="option__amount"><span class="minus minus-third">-</span>
+                                  <input class="guest__amount-third" type="text" readonly value="0"><span class="plus plus-third">+</span>
+                                </div>
+                              </div>
+                              <div class="link-btn"> 
+                                <input class="reset" type="reset" value="Сбросить">
+                                <input class="submit" type="submit" value="Применить" id="submit">
+                              </div>
+                            </div>
+                          </form>
+                    <div class="room__inner-range">
+                            <div class="rangeSlider">
+                              <label>диапазон цены</label>
+                              <input class="js-range-slider" type="text" name="my_range" oninput="this.parentElement.dataset.val = this.value">
+                            </div>
+                      <h3>Стоимость за сутки пребывания в номере</h3>
+                    </div>
+                  </div>
+                  <div class="room__aside-line2"> 
+                    <div class="room__aside-line3">
+                      <div class="opportunity">
+                        <h5 class="opportunity__label">Возможности</h5>
+                              <div class="checkbox__inner">
+                                <input class="checkbox__input" type="checkbox" id="smoke">
+                                <div class="convenience__info checkbox__info">
+                                  <label class="heading__checkbox" for="smoke"></label>
+                                  <label for="smoke">Можно курить</label>
+                                </div>
+                              </div>
+                              <div class="checkbox__inner">
+                                <input class="checkbox__input" type="checkbox" id="pets">
+                                <div class="convenience__info checkbox__info">
+                                  <label class="heading__checkbox" for="pets"></label>
+                                  <label for="pets">Можно с питомцами</label>
+                                </div>
+                              </div>
+                              <div class="checkbox__inner">
+                                <input class="checkbox__input" type="checkbox" id="guests">
+                                <div class="convenience__info checkbox__info">
+                                  <label class="heading__checkbox" for="guests"></label>
+                                  <label for="guests">Можно пригласить гостей (до 10 человек)</label>
+                                </div>
+                              </div>
+                      </div>
+                      <div class="convenience">
+                        <h5>доступность</h5>
+                              <div class="checkbox__inner">
+                                <input class="checkbox__input" type="checkbox" id="ok">
+                                <div class="convenience__info checkbox__info">
+                                  <label class="heading__checkbox" for="ok">Широкий коридор</label>
+                                  <label for="ok">Ширина коридоров в номере не менее 91 см.</label>
+                                </div>
+                              </div>
+                              <div class="checkbox__inner">
+                                <input class="checkbox__input" type="checkbox" id="ik">
+                                <div class="convenience__info checkbox__info">
+                                  <label class="heading__checkbox" for="ik">Помощник для инвалидов</label>
+                                  <label for="ik">На 1 этаже вас встретит специалист  и проводит до номера.</label>
+                                </div>
+                              </div>
+                      </div>
+                            <form class="guest__inner-amount" onsubmit="return false;">
+                              <h5>удобства номера</h5>
+                              <input class="guest__amount" type="text" value="0">
+                              <div class="option__inner invisible">
+                                <div class="option">
+                                  <h4>спальни</h4>
+                                  <div class="option__amount"><span class="minus minus-first">-</span>
+                                    <input class="guest__amount-first" type="text" readonly value="0"><span class="plus plus-first">+</span>
+                                  </div>
+                                </div>
+                                <div class="option">
+                                  <h4>кровати</h4>
+                                  <div class="option__amount"><span class="minus minus-second">-</span>
+                                    <input class="guest__amount-second" type="text" readonly value="0"><span class="plus plus-second">+</span>
+                                  </div>
+                                </div>
+                                <div class="option">
+                                  <h4>ванные комнаты</h4>
+                                  <div class="option__amount"><span class="minus minus-third">-</span>
+                                    <input class="guest__amount-third" type="text" readonly value="0"><span class="plus plus-third">+</span>
+                                  </div>
+                                </div>
+                                <div class="link-btn"> 
+                                  <input class="reset" type="reset" value="Сбросить">
+                                  <input class="submit" type="submit" value="Применить" id="submit">
+                                </div>
+                              </div>
+                            </form>
+                            <div class="checkbox__list">
+                              <h3 class="checkbox__list-label">дополнительные удобства</h3>
+                              <ul class="checkbox__list-dropdown active">
+                                <li>
+                                        <div class="checkbox__inner">
+                                          <input class="checkbox__input" type="checkbox" id="breakfast">
+                                          <div class="convenience__info checkbox__info">
+                                            <label class="heading__checkbox" for="breakfast"></label>
+                                            <label for="breakfast">Завтрак</label>
+                                          </div>
+                                        </div>
+                                </li>
+                                <li>
+                                        <div class="checkbox__inner">
+                                          <input class="checkbox__input" type="checkbox" id="table">
+                                          <div class="convenience__info checkbox__info">
+                                            <label class="heading__checkbox" for="table"></label>
+                                            <label for="table">Письменный стол</label>
+                                          </div>
+                                        </div>
+                                </li>
+                                <li>
+                                        <div class="checkbox__inner">
+                                          <input class="checkbox__input" type="checkbox" id="sup">
+                                          <div class="convenience__info checkbox__info">
+                                            <label class="heading__checkbox" for="sup"></label>
+                                            <label for="sup">Стул для кормления</label>
+                                          </div>
+                                        </div>
+                                </li>
+                                <li>
+                                        <div class="checkbox__inner">
+                                          <input class="checkbox__input" type="checkbox" id="bed">
+                                          <div class="convenience__info checkbox__info">
+                                            <label class="heading__checkbox" for="bed"></label>
+                                            <label for="bed">Кроватка</label>
+                                          </div>
+                                        </div>
+                                </li>
+                                <li>
+                                        <div class="checkbox__inner">
+                                          <input class="checkbox__input" type="checkbox" id="tv">
+                                          <div class="convenience__info checkbox__info">
+                                            <label class="heading__checkbox" for="tv"></label>
+                                            <label for="tv">Телевизор</label>
+                                          </div>
+                                        </div>
+                                </li>
+                                <li>
+                                        <div class="checkbox__inner">
+                                          <input class="checkbox__input" type="checkbox" id="shampoo">
+                                          <div class="convenience__info checkbox__info">
+                                            <label class="heading__checkbox" for="shampoo"></label>
+                                            <label for="shampoo">Шампунь</label>
+                                          </div>
+                                        </div>
+                                </li>
+                              </ul>
+                            </div>
+                    </div>
+                    <div class="room__inner-btn"><a href="#">Применить        </a></div>
+                  </div>
+                </div>
+                <div class="room__inner-main data-container">
+                  <div class="room__main-title"> 
+                    <h3>Номера, которые мы для вас подобрали</h3>
+                  </div>
+                  <div class="room__main-items">
+                    <div class="room__main-item">
+                            <div class="roominfo__inner">
+                              <div class="slider__inner-dots"> 
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                              </div>
+                              <div class="roominfo__inner-price"> 
+                                <div class="number__price">
+                                  <div class="number__price-info"><a href="#">
+                                      <h5>№ 888</h5></a><span class="number__class">люкс</span></div>
+                                  <div class="number__price-money"> <i>9 990₽</i><span class="one__day">в сутки </span></div>
+                                </div>
+                                <div class="roominfo__rating"> 
+                                        <div class="rate__inner">
+                                          <section>
+                                            <div class="rating left">
+                                              <div class="stars right"><a class="star rated"></a><a class="star rated"></a><a class="star rated"></a><a class="star"></a><a class="star"></a></div>
+                                            </div>
+                                          </section>
+                                        </div><a href="#">65<span>Отзывов</span></a>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                    <div class="room__main-item">
+                            <div class="roominfo__inner">
+                              <div class="slider__inner-dots"> 
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                              </div>
+                              <div class="roominfo__inner-price"> 
+                                <div class="number__price">
+                                  <div class="number__price-info"><a href="#">
+                                      <h5>№ 888</h5></a><span class="number__class">люкс</span></div>
+                                  <div class="number__price-money"> <i>9 990₽</i><span class="one__day">в сутки </span></div>
+                                </div>
+                                <div class="roominfo__rating"> 
+                                        <div class="rate__inner">
+                                          <section>
+                                            <div class="rating left">
+                                              <div class="stars right"><a class="star rated"></a><a class="star rated"></a><a class="star rated"></a><a class="star"></a><a class="star"></a></div>
+                                            </div>
+                                          </section>
+                                        </div><a href="#">65<span>Отзывов</span></a>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                    <div class="room__main-item">
+                            <div class="roominfo__inner">
+                              <div class="slider__inner-dots"> 
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                              </div>
+                              <div class="roominfo__inner-price"> 
+                                <div class="number__price">
+                                  <div class="number__price-info"><a href="#">
+                                      <h5>№ 888</h5></a><span class="number__class">люкс</span></div>
+                                  <div class="number__price-money"> <i>9 990₽</i><span class="one__day">в сутки </span></div>
+                                </div>
+                                <div class="roominfo__rating"> 
+                                        <div class="rate__inner">
+                                          <section>
+                                            <div class="rating left">
+                                              <div class="stars right"><a class="star rated"></a><a class="star rated"></a><a class="star rated"></a><a class="star"></a><a class="star"></a></div>
+                                            </div>
+                                          </section>
+                                        </div><a href="#">65<span>Отзывов</span></a>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                    <div class="room__main-item">
+                            <div class="roominfo__inner">
+                              <div class="slider__inner-dots"> 
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                              </div>
+                              <div class="roominfo__inner-price"> 
+                                <div class="number__price">
+                                  <div class="number__price-info"><a href="#">
+                                      <h5>№ 888</h5></a><span class="number__class">люкс</span></div>
+                                  <div class="number__price-money"> <i>9 990₽</i><span class="one__day">в сутки </span></div>
+                                </div>
+                                <div class="roominfo__rating"> 
+                                        <div class="rate__inner">
+                                          <section>
+                                            <div class="rating left">
+                                              <div class="stars right"><a class="star rated"></a><a class="star rated"></a><a class="star rated"></a><a class="star"></a><a class="star"></a></div>
+                                            </div>
+                                          </section>
+                                        </div><a href="#">65<span>Отзывов</span></a>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                    <div class="room__main-item">
+                            <div class="roominfo__inner">
+                              <div class="slider__inner-dots"> 
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                              </div>
+                              <div class="roominfo__inner-price"> 
+                                <div class="number__price">
+                                  <div class="number__price-info"><a href="#">
+                                      <h5>№ 888</h5></a><span class="number__class">люкс</span></div>
+                                  <div class="number__price-money"> <i>9 990₽</i><span class="one__day">в сутки </span></div>
+                                </div>
+                                <div class="roominfo__rating"> 
+                                        <div class="rate__inner">
+                                          <section>
+                                            <div class="rating left">
+                                              <div class="stars right"><a class="star rated"></a><a class="star rated"></a><a class="star rated"></a><a class="star"></a><a class="star"></a></div>
+                                            </div>
+                                          </section>
+                                        </div><a href="#">65<span>Отзывов</span></a>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                    <div class="room__main-item">
+                            <div class="roominfo__inner">
+                              <div class="slider__inner-dots"> 
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                              </div>
+                              <div class="roominfo__inner-price"> 
+                                <div class="number__price">
+                                  <div class="number__price-info"><a href="#">
+                                      <h5>№ 888</h5></a><span class="number__class">люкс</span></div>
+                                  <div class="number__price-money"> <i>9 990₽</i><span class="one__day">в сутки </span></div>
+                                </div>
+                                <div class="roominfo__rating"> 
+                                        <div class="rate__inner">
+                                          <section>
+                                            <div class="rating left">
+                                              <div class="stars right"><a class="star rated"></a><a class="star rated"></a><a class="star rated"></a><a class="star"></a><a class="star"></a></div>
+                                            </div>
+                                          </section>
+                                        </div><a href="#">65<span>Отзывов</span></a>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                    <div class="room__main-item">
+                            <div class="roominfo__inner">
+                              <div class="slider__inner-dots"> 
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                              </div>
+                              <div class="roominfo__inner-price"> 
+                                <div class="number__price">
+                                  <div class="number__price-info"><a href="#">
+                                      <h5>№ 888</h5></a><span class="number__class">люкс</span></div>
+                                  <div class="number__price-money"> <i>9 990₽</i><span class="one__day">в сутки </span></div>
+                                </div>
+                                <div class="roominfo__rating"> 
+                                        <div class="rate__inner">
+                                          <section>
+                                            <div class="rating left">
+                                              <div class="stars right"><a class="star rated"></a><a class="star rated"></a><a class="star rated"></a><a class="star"></a><a class="star"></a></div>
+                                            </div>
+                                          </section>
+                                        </div><a href="#">65<span>Отзывов</span></a>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                    <div class="room__main-item">
+                            <div class="roominfo__inner">
+                              <div class="slider__inner-dots"> 
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                              </div>
+                              <div class="roominfo__inner-price"> 
+                                <div class="number__price">
+                                  <div class="number__price-info"><a href="#">
+                                      <h5>№ 888</h5></a><span class="number__class">люкс</span></div>
+                                  <div class="number__price-money"> <i>9 990₽</i><span class="one__day">в сутки </span></div>
+                                </div>
+                                <div class="roominfo__rating"> 
+                                        <div class="rate__inner">
+                                          <section>
+                                            <div class="rating left">
+                                              <div class="stars right"><a class="star rated"></a><a class="star rated"></a><a class="star rated"></a><a class="star"></a><a class="star"></a></div>
+                                            </div>
+                                          </section>
+                                        </div><a href="#">65<span>Отзывов</span></a>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                    <div class="room__main-item">
+                            <div class="roominfo__inner">
+                              <div class="slider__inner-dots"> 
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                              </div>
+                              <div class="roominfo__inner-price"> 
+                                <div class="number__price">
+                                  <div class="number__price-info"><a href="#">
+                                      <h5>№ 888</h5></a><span class="number__class">люкс</span></div>
+                                  <div class="number__price-money"> <i>9 990₽</i><span class="one__day">в сутки </span></div>
+                                </div>
+                                <div class="roominfo__rating"> 
+                                        <div class="rate__inner">
+                                          <section>
+                                            <div class="rating left">
+                                              <div class="stars right"><a class="star rated"></a><a class="star rated"></a><a class="star rated"></a><a class="star"></a><a class="star"></a></div>
+                                            </div>
+                                          </section>
+                                        </div><a href="#">65<span>Отзывов</span></a>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                    <div class="room__main-item">
+                            <div class="roominfo__inner">
+                              <div class="slider__inner-dots"> 
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                              </div>
+                              <div class="roominfo__inner-price"> 
+                                <div class="number__price">
+                                  <div class="number__price-info"><a href="#">
+                                      <h5>№ 888</h5></a><span class="number__class">люкс</span></div>
+                                  <div class="number__price-money"> <i>9 990₽</i><span class="one__day">в сутки </span></div>
+                                </div>
+                                <div class="roominfo__rating"> 
+                                        <div class="rate__inner">
+                                          <section>
+                                            <div class="rating left">
+                                              <div class="stars right"><a class="star rated"></a><a class="star rated"></a><a class="star rated"></a><a class="star"></a><a class="star"></a></div>
+                                            </div>
+                                          </section>
+                                        </div><a href="#">65<span>Отзывов</span></a>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                    <div class="room__main-item">
+                            <div class="roominfo__inner">
+                              <div class="slider__inner-dots"> 
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                              </div>
+                              <div class="roominfo__inner-price"> 
+                                <div class="number__price">
+                                  <div class="number__price-info"><a href="#">
+                                      <h5>№ 888</h5></a><span class="number__class">люкс</span></div>
+                                  <div class="number__price-money"> <i>9 990₽</i><span class="one__day">в сутки </span></div>
+                                </div>
+                                <div class="roominfo__rating"> 
+                                        <div class="rate__inner">
+                                          <section>
+                                            <div class="rating left">
+                                              <div class="stars right"><a class="star rated"></a><a class="star rated"></a><a class="star rated"></a><a class="star"></a><a class="star"></a></div>
+                                            </div>
+                                          </section>
+                                        </div><a href="#">65<span>Отзывов</span></a>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                    <div class="room__main-item">
+                            <div class="roominfo__inner">
+                              <div class="slider__inner-dots"> 
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                                <div><a href="#"><img src="assets/img/infoRoomImg.jpg" alt="slider-photo"></a></div>
+                              </div>
+                              <div class="roominfo__inner-price"> 
+                                <div class="number__price">
+                                  <div class="number__price-info"><a href="#">
+                                      <h5>№ 888</h5></a><span class="number__class">люкс</span></div>
+                                  <div class="number__price-money"> <i>9 990₽</i><span class="one__day">в сутки </span></div>
+                                </div>
+                                <div class="roominfo__rating"> 
+                                        <div class="rate__inner">
+                                          <section>
+                                            <div class="rating left">
+                                              <div class="stars right"><a class="star rated"></a><a class="star rated"></a><a class="star rated"></a><a class="star"></a><a class="star"></a></div>
+                                            </div>
+                                          </section>
+                                        </div><a href="#">65<span>Отзывов</span></a>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                  </div>
+                  <ul class="pagination-sm pagination-container" id="pagination-demo"></ul><span class="total_pages"></span>
+                  <div class="info__pages">1 – 12 из 100+ вариантов аренды</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+              <footer>
+                <div class="container--footer">
+                  <div class="container">
+                    <div class="footer__inner-top">
+                      <div class="footer__inner-info">
+                        <div class="footer__info-logo"><a href="#"><img src="assets/img/TOXIN.svg" alt=""><img src="assets/img/toxin1.svg" alt=""></a></div>
+                        <div class="footer__info-text">
+                          <p>Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»  </p>
+                        </div>
+                      </div>
+                      <div class="footer__inner-navigation">
+                        <div class="footer__inner-nav">
+                          <div class="footer__nav-title footer__title">
+                            <h5>навигация</h5>
+                          </div>
+                          <ul class="footer__about-list footer--nav">
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Служба поддержки</a></li>
+                            <li><a href="#">Услуги</a></li>
+                          </ul>
+                        </div>
+                        <div class="footer__inner-about">
+                          <div class="footer__about-title footer__title">
+                            <h5>о нас</h5>
+                          </div>
+                          <ul class="footer__about-list footer--about">
+                            <li><a href="#">О сервисе</a></li>
+                            <li><a href="#">Наша команда</a></li>
+                            <li><a href="#">Вакансии</a></li>
+                            <li> <a href="#">Инвесторы</a></li>
+                          </ul>
+                        </div>
+                        <div class="footer__inner-sup">
+                          <div class="footer__sup-title footer__title">
+                            <h5>Служба поддержки</h5>
+                          </div>
+                          <ul class="footer__about-list footer--sup">
+                            <li><a href="#">Соглашения</a></li>
+                            <li><a href="#">Сообщества</a></li>
+                            <li><a href="#">Связь с нами</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="footer__inner-sub">   
+                        <div class="footer__sub-title footer__title">
+                          <h5>Подписка </h5>
+                          <p>Получайте специальные предложения и новости сервиса</p>
+                        </div>
+                              <div class="input__inner">
+                                <label class="input__label"></label>
+                                <form class="input__inner-send">
+                                  <input class="general__input apus-search" placeholder="Email" type="text" name="email" id="email">
+                                  <button class="button-search btn" type="submit"><i class="icon-arrow_forward"></i></button>
+                                </form>
+                              </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer__bottom-wrapper"> 
+                    <div class="container"> 
+                      <div class="footer__inner-bottom">  
+                        <div class="footer__bottom-left"><a href="#">Copyright © 2018 Toxin отель. Все права зачищены.</a></div>
+                        <div class="footer__bottom-logos"><a class="icon-twitter" href="#"></a><a class="icon-facebook-square" href="#"></a><a class="icon-instagram" href="#"> </a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+      </div>
+    </div>
+  <script type="text/javascript" src="/assets/js/vendors.js"></script><script type="text/javascript" src="/assets/js/module.js"></script></body>
+</html>

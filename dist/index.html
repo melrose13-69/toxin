@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOXIN</title>
+  <link href="/assets//css/vendors.css" rel="stylesheet"><link href="/assets//css/module.css" rel="stylesheet"></head>
+  <body>
+    <div id="app">
+      <div class="wrapper">
+        <div class="content">
+                <header class="header__main-page header">
+                  <div class="container">
+                    <div class="header__inner">
+                      <div class="header__inner-logo"><a href="index.html"><img src="assets/img/TOXIN.svg" alt=""><img src="assets/img/toxin1.svg" alt=""></a></div>
+                      <div class="header__inner-menu">
+                        <div class="header__inner-list">
+                          <ul class="header__list">
+                            <li><a class="header__list-item" href="#">О нас</a></li>
+                            <li class="header__list-services"><a class="header__list-item" href="#">Услуги<span> </span></a></li>
+                            <li><a class="header__list-item" href="#">Вакансии</a></li>
+                            <li><a class="header__list-item" href="#">Новости</a></li>
+                            <li class="header__list-agreement"><a class="header__list-item" href="#">Соглашения<span> </span></a></li>
+                          </ul>
+                        </div>
+                        <div class="header__inner-btn"><a class="btn btn-transperent" href="signin.html">войти<span></span></a><a class="btn btn-gradient" href="reg.html">зарегистрироваться<span></span></a>
+                        </div>
+                        <div class="header__inner-burger"> 
+                          <div class="header__burger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+          <section class="landing">
+            <div class="landing__inner" style="background-image: url(assets/img/background.jpg); background-repeat: no-repeat; background-size: cover">
+              <div class="container">
+                      <div class="inner__wishes">
+                        <div class="wishes__title">
+                          <h4>Найдём номера под ваши пожелания</h4>
+                        </div>
+                        <div class="wishes__date">
+                                <form class="one">
+                                  <div class="one__input"> 
+                                    <label for="start_one">Прибытие</label>
+                                    <input class="datepicker-here" type="text" id="start_one" data-range="true" data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ">
+                                  </div>
+                                  <div class="one__input"> 
+                                    <label for="start_one">Выезд</label>
+                                    <input type="text" id="end_one" placeholder="ДД.ММ.ГГГГ">
+                                  </div>
+                                </form>
+                        </div>
+                        <div class="wishes__calcline">
+                                <form class="guest__inner-amount" onsubmit="return false;">
+                                  <h5>Гости</h5>
+                                  <input class="guest__amount" type="text" value="0">
+                                  <div class="option__inner invisible">
+                                    <div class="option">
+                                      <h4>Взрослые</h4>
+                                      <div class="option__amount"><span class="minus minus-first">-</span>
+                                        <input class="guest__amount-first" type="text" readonly value="0"><span class="plus plus-first">+</span>
+                                      </div>
+                                    </div>
+                                    <div class="option">
+                                      <h4>дети</h4>
+                                      <div class="option__amount"><span class="minus minus-second">-</span>
+                                        <input class="guest__amount-second" type="text" readonly value="0"><span class="plus plus-second">+</span>
+                                      </div>
+                                    </div>
+                                    <div class="option">
+                                      <h4>младенцы</h4>
+                                      <div class="option__amount"><span class="minus minus-third">-</span>
+                                        <input class="guest__amount-third" type="text" readonly value="0"><span class="plus plus-third">+</span>
+                                      </div>
+                                    </div>
+                                    <div class="link-btn"> 
+                                      <input class="reset" type="reset" value="Сбросить">
+                                      <input class="submit" type="submit" value="Применить" id="submit">
+                                    </div>
+                                  </div>
+                                </form>
+                        </div>
+                        <div class="wishes__btn"><a class="btn btn-big" href="searchroom.html">Подобрать номер<span></span></a>
+                        </div>
+                      </div>
+              </div>
+            </div>
+          </section>
+        </div>
+              <footer>
+                <div class="container--footer">
+                  <div class="container">
+                    <div class="footer__inner-top">
+                      <div class="footer__inner-info">
+                        <div class="footer__info-logo"><a href="#"><img src="assets/img/TOXIN.svg" alt=""><img src="assets/img/toxin1.svg" alt=""></a></div>
+                        <div class="footer__info-text">
+                          <p>Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»  </p>
+                        </div>
+                      </div>
+                      <div class="footer__inner-navigation">
+                        <div class="footer__inner-nav">
+                          <div class="footer__nav-title footer__title">
+                            <h5>навигация</h5>
+                          </div>
+                          <ul class="footer__about-list footer--nav">
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Служба поддержки</a></li>
+                            <li><a href="#">Услуги</a></li>
+                          </ul>
+                        </div>
+                        <div class="footer__inner-about">
+                          <div class="footer__about-title footer__title">
+                            <h5>о нас</h5>
+                          </div>
+                          <ul class="footer__about-list footer--about">
+                            <li><a href="#">О сервисе</a></li>
+                            <li><a href="#">Наша команда</a></li>
+                            <li><a href="#">Вакансии</a></li>
+                            <li> <a href="#">Инвесторы</a></li>
+                          </ul>
+                        </div>
+                        <div class="footer__inner-sup">
+                          <div class="footer__sup-title footer__title">
+                            <h5>Служба поддержки</h5>
+                          </div>
+                          <ul class="footer__about-list footer--sup">
+                            <li><a href="#">Соглашения</a></li>
+                            <li><a href="#">Сообщества</a></li>
+                            <li><a href="#">Связь с нами</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="footer__inner-sub">   
+                        <div class="footer__sub-title footer__title">
+                          <h5>Подписка </h5>
+                          <p>Получайте специальные предложения и новости сервиса</p>
+                        </div>
+                              <div class="input__inner">
+                                <label class="input__label"></label>
+                                <form class="input__inner-send">
+                                  <input class="general__input apus-search" placeholder="Email" type="text" name="email" id="email">
+                                  <button class="button-search btn" type="submit"><i class="icon-arrow_forward"></i></button>
+                                </form>
+                              </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer__bottom-wrapper"> 
+                    <div class="container"> 
+                      <div class="footer__inner-bottom">  
+                        <div class="footer__bottom-left"><a href="#">Copyright © 2018 Toxin отель. Все права зачищены.</a></div>
+                        <div class="footer__bottom-logos"><a class="icon-twitter" href="#"></a><a class="icon-facebook-square" href="#"></a><a class="icon-instagram" href="#"> </a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+      </div>
+    </div>
+  <script type="text/javascript" src="/assets/js/vendors.js"></script><script type="text/javascript" src="/assets/js/module.js"></script></body>
+</html>
